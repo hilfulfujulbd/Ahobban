@@ -25,6 +25,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.tasks.Task;
@@ -69,11 +70,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         linearLayoutAds = findViewById(R.id.bannerLayoutAds);
 
 
-
         internetConnectivity = new InternetConnectivity(this);
         adsControllerClass = new AdsControllerClass(this);
 
-        if(internetConnectivity.isConnected()){
+        if (internetConnectivity.isConnected()) {
             bannerAdsLoad();
             countDownTimer.start();
         }
@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     private void bannerAdsLoad() {
-        if(countDownTimer != null){
+        if (countDownTimer != null) {
             countDownTimer.cancel();
         }
         countDownTimer = new CountDownTimer(LENGTH_MILLISECONDS_WAITE, 50) {
@@ -142,12 +142,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             @Override
             public void onFinish() {
-                if(internetConnectivity.isConnected()){
-                    if(mAdView == null){
+                if (internetConnectivity.isConnected()) {
+                    if (mAdView != null) {
+                        adsControllerClass.AdsBannerShow(mAdView);
+                        mAdView.setAdListener(new AdListener() {
+                            @Override
+                            public void onAdLoaded() {
+                                super.onAdLoaded();
+                                linearLayoutAds.setVisibility(View.VISIBLE);
+                            }
+                        });
+                    } else {
                         linearLayoutAds.setVisibility(View.GONE);
                     }
-                    adsControllerClass.AdsBannerShow(mAdView);
-                    linearLayoutAds.setVisibility(View.VISIBLE);
                 }
 
             }
@@ -239,7 +246,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (item.getItemId() == R.id.privacy) {
             gotoUrl("https://toufikhasan.com/android-apk/book/ahobban-book/privacy-policy.html");
         } else if (item.getItemId() == R.id.update_app) {
-            IN_APP_UPDATE_AVAILABLE_MESSAGE_BOOK();
+            IN_APP_UPDATE_AVAILABLE_AHOBBAN_BOOK();
         } else if (item.getItemId() == R.id.aber_vinno_kicu_app) {
             gotoUrl("https://play.google.com/store/apps/details?id=com.toufikhasan.abarvinnokichuhok");
         } else if (item.getItemId() == R.id.message_book_app) {
@@ -317,7 +324,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(link)));
     }
 
-    private void IN_APP_UPDATE_AVAILABLE_MESSAGE_BOOK() {
+    private void IN_APP_UPDATE_AVAILABLE_AHOBBAN_BOOK() {
         AppUpdateManager appUpdateManager = AppUpdateManagerFactory.create(this);
 
 // Returns an intent object that you use to check for an update.

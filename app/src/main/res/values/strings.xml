@@ -1,22 +1,15 @@
 <resources>
     <string name="app_name">Ahobban Book</string>
 
-
-<!--       // TODO: Google TEST application information ;-->
-    <string name="ads_app_id">ca-app-pub-3940256099942544~3347511713</string>
-    <string name="ads_banner_home_bottom">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="ads_banner_textShow_bottom">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="ads_banner">BANNER</string>
-    <string name="ads_image_id">ca-app-pub-3940256099942544/1033173712</string>
     <!--/*
-        TODO: Google Admob application information data ;
-
-    <string name="ads_app_id">ca-app-pub-5980068077636654~4063239605</string>
-    <string name="ads_banner_home_bottom">ca-app-pub-5980068077636654/4904869325</string>
-    <string name="ads_banner_textShow_bottom">ca-app-pub-5980068077636654/9905914566</string>
-    <string name="ads_banner">BANNER</string>
-    <string name="ads_image_id">ca-app-pub-5980068077636654/7725052907</string>
+        TODO: Google Admob application information data ; now device must to add test device on admob
     */-->
+    <string name="ads_app_id">ca-app-pub-5980068077636654~4063239605</string>
+    <string name="ads_banner_home_bottom">ca-app-pub-5980068077636654/1003525013</string>
+    <string name="ads_banner_textShow_bottom">ca-app-pub-5980068077636654/5935970265</string>
+    <string name="ads_banner">BANNER</string>
+    <string name="ads_image_id">ca-app-pub-5980068077636654/6354646435</string>
+
 
     <string name="suchiprotro">সুচিপত্র</string>
     <string name="intro">আধুনিক মননে আলোর পরশ</string>
