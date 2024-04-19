@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/writter"
+            android:icon="@drawable/ic_bookwriter"
+            android:title="@string/book_writer" />
+        <item
+            android:id="@+id/about_us"
+            android:icon="@drawable/ic_about_app"
+            android:title="@string/about_apps" />
+        <item
+            android:id="@+id/privacy"
+            android:icon="@drawable/ic_privacy"
+            android:title="@string/privacy_policy" />
+        <item
+            android:id="@+id/update_app"
+            android:icon="@drawable/update_icon"
+            android:title="@string/update_app" />
+    </group>
+
+    <item android:title="@string/other_application">
+        <menu>
+            <item
+                android:id="@+id/aber_vinno_kicu_app"
+                android:icon="@drawable/abar_vinno_kichu_hoq_app_icon"
+                android:title="@string/ahobban_book" />
+            <item
+                android:id="@+id/message_book_app"
+                android:icon="@drawable/message_book_icon"
+                android:title="@string/message_book" />
+            <item
+                android:id="@+id/moreApp"
+                android:icon="@drawable/ic_read_more"
+                android:title="@string/more_apps" />
+        </menu>
+    </item>
+
+    <item android:title="@string/communication">
+        <menu>
+            <item
+                android:id="@+id/ratting"
+                android:icon="@drawable/rate_app_icon"
+                android:title="@string/rate_app" />
+            <item
+                android:id="@+id/contact_us"
+                android:icon="@drawable/ic_contact_us"
+                android:title="@string/contact_us" />
+            <item
+                android:id="@+id/website"
+                android:icon="@drawable/ic_link_website"
+                android:title="@string/website" />
+            <item
+                android:id="@+id/shair"
+                android:icon="@drawable/ic_shair"
+                android:title="@string/share" />
+        </menu>
+    </item>
+    <item android:title="@string/social_account">
+        <menu>
+            <item
+                android:id="@+id/facebook_page"
+                android:icon="@drawable/facebook_icon"
+                android:title="@string/facebook_page" />
+            <item
+                android:id="@+id/facebook_group"
+                android:icon="@drawable/facebook_icon"
+                android:title="@string/facebook_group" />
+            <item
+                android:id="@+id/youtube"
+                android:icon="@drawable/youtube_icon"
+                android:title="@string/youtube_toufik" />
+            <item
+                android:id="@+id/youtube2"
+                android:icon="@drawable/youtube_icon"
+                android:title="@string/youtube_tauhid" />
+            <item
+                android:id="@+id/linkedin"
+                android:icon="@drawable/linkedin_icon"
+                android:title="@string/linkedin" />
+        </menu>
+    </item>
+</menu>

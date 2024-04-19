@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/android_background_icon"
+    tools:context=".MainActivity"
+    tools:openDrawer="end">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <!--    TODO: background color opacity is 95%    -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="#9503A9F4">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/bangla_font"
+                android:gravity="center_horizontal"
+                android:text="@string/suchiprotro"
+                android:textColor="@color/text_color"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="9.5">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <GridLayout
+                        android:id="@+id/gridLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:columnCount="1"
+                        tools:ignore="UselessParent">
+
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:foreground="@drawable/click_event"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <Button
+                                android:id="@+id/kacheAsarGolpo"
+                                style="@style/Widget.MaterialComponents.Button.TextButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:drawableStart="@android:drawable/star_on"
+                                android:gravity="start|center_vertical"
+                                android:padding="10dp"
+                                android:text="@string/kacheAsarGolpo"
+                                android:textSize="20sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:foreground="@drawable/click_event"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <Button
+                                android:id="@+id/helthdyLifeStyle"
+                                style="@style/Widget.MaterialComponents.Button.TextButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:drawableStart="@android:drawable/star_on"
+                                android:gravity="start|center_vertical"
+                                android:padding="10dp"
+                                android:text="@string/heldiLifeStyle"
+                                android:textSize="20sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:foreground="@drawable/click_event"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <Button
+                                android:id="@+id/dehaBaron"
+                                style="@style/Widget.MaterialComponents.Button.TextButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:drawableStart="@android:drawable/star_on"
+                                android:gravity="start|center_vertical"
+                                android:padding="10dp"
+                                android:text="@string/dehaBoron"
+                                android:textSize="20sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:foreground="@drawable/click_event"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <Button
+                                android:id="@+id/sopnoKotha"
+                                style="@style/Widget.MaterialComponents.Button.TextButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:drawableStart="@android:drawable/star_on"
+                                android:gravity="start|center_vertical"
+                                android:padding="10dp"
+                                android:text="@string/shopnoKotha"
+                                android:textSize="20sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:foreground="@drawable/click_event"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <Button
+                                android:id="@+id/diptimoyTaronno"
+                                style="@style/Widget.MaterialComponents.Button.TextButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:drawableStart="@android:drawable/star_on"
+                                android:gravity="start|center_vertical"
+                                android:padding="10dp"
+                                android:text="@string/diptomoyTaronno"
+                                android:textSize="20sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:foreground="@drawable/click_event"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <Button
+                                android:id="@+id/AllahorChador"
+                                style="@style/Widget.MaterialComponents.Button.TextButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:drawableStart="@android:drawable/star_on"
+                                android:gravity="start|center_vertical"
+                                android:padding="10dp"
+                                android:text="@string/AllahurChador"
+                                android:textSize="20sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:foreground="@drawable/click_event"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <Button
+                                android:id="@+id/spacialMediaManaros"
+                                style="@style/Widget.MaterialComponents.Button.TextButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:drawableStart="@android:drawable/star_on"
+                                android:gravity="start|center_vertical"
+                                android:padding="10dp"
+                                android:text="@string/socialMediaMororos"
+                                android:textSize="20sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:foreground="@drawable/click_event"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <Button
+                                android:id="@+id/shesVorosa"
+                                style="@style/Widget.MaterialComponents.Button.TextButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:drawableStart="@android:drawable/star_on"
+                                android:gravity="start|center_vertical"
+                                android:padding="10dp"
+                                android:text="@string/shesVorosa"
+                                android:textSize="20sp" />
+                        </androidx.cardview.widget.CardView>
+                    </GridLayout>
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bannerLayoutAds"
+            android:layout_width="match_parent"
+            android:layout_height="105dp"
+            android:background="@color/black"
+            android:visibility="gone"
+            >
+
+            <!--    Ads View    -->
+            <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                ads:adSize="LARGE_BANNER"
+                ads:adUnitId="@string/ads_banner_home_bottom" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#fff"
+        app:headerLayout="@layout/navigation_header"
+        app:menu="@menu/site_navigation_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

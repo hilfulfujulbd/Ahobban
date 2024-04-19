@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/welcome_status_bar_color"
+    android:orientation="vertical"
+    tools:context=".WellcomeScreen">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top|center_horizontal"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/logo_wellcome_screen"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="100dp"
+                android:contentDescription="Image Logo"
+                android:src="@drawable/ahobban_book_icon"
+                tools:ignore="HardcodedText" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/developer_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="60dp"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints,UseCompoundDrawables,UselessLeaf">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bangla_font"
+                android:text="@string/from_text"
+                android:textAlignment="center"
+                android:textColor="#0C2E2E"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bangla_font"
+                android:text="@string/hilful_fujul_bd"
+                android:textAlignment="center"
+                android:textColor="#061312"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

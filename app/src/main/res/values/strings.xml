@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">Ahobban Book</string>
+
+
+<!--       // TODO: Google TEST application information ;-->
+    <string name="ads_app_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="ads_banner_home_bottom">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="ads_banner_textShow_bottom">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="ads_banner">BANNER</string>
+    <string name="ads_image_id">ca-app-pub-3940256099942544/1033173712</string>
+    <!--/*
+        TODO: Google Admob application information data ;
+
+    <string name="ads_app_id">ca-app-pub-5980068077636654~4063239605</string>
+    <string name="ads_banner_home_bottom">ca-app-pub-5980068077636654/4904869325</string>
+    <string name="ads_banner_textShow_bottom">ca-app-pub-5980068077636654/9905914566</string>
+    <string name="ads_banner">BANNER</string>
+    <string name="ads_image_id">ca-app-pub-5980068077636654/7725052907</string>
+    */-->
+
+    <string name="suchiprotro">সুচিপত্র</string>
+    <string name="intro">আধুনিক মননে আলোর পরশ</string>
+
+    <string name="kacheAsarGolpo">কাছে আসার গল্প</string>
+    <string name="heldiLifeStyle">হেলদি লাইফস্টাইল</string>
+    <string name="dehaBoron">দেহাবরণ</string>
+    <string name="shopnoKotha">স্বপ্নকথা</string>
+    <string name="diptomoyTaronno">দীপ্তিময় তারুণ্য</string>
+    <string name="AllahurChador">আল্লাহর চাদর</string>
+    <string name="socialMediaMororos">সোশ্যাল মিডিয়া ম্যানারস</string>
+    <string name="shesVorosa">শেষ ভরসা</string>
+
+    <string name="nav_open">Navigation Open</string>
+    <string name="nav_close">Navigation Close</string>
+
+    <string name="home">Home</string>
+    <string name="book_writer">Book Writer</string>
+    <string name="about_apps">About Book</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="other_application">Other Application</string>
+    <string name="message_book">Message Book</string>
+    <string name="JubokFreAsoIslamerPothe">হে যুবক ফিরে আসো রবের দিকে</string>
+    <string name="more_apps">More Apps</string>
+    <string name="communication">Communication</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="website">My Website</string>
+    <string name="company_website">Company Website</string>
+    <string name="shair">Shair</string>
+    <string name="social_account">Social Account</string>
+    <string name="facebook_toufik">Facebook</string>
+    <string name="facebook_tauhid">Facebook</string>
+    <string name="youtube_toufik">Dev Youtube</string>
+    <string name="youtube_tauhid">Youtube</string>
+    <string name="linkedin">LinkedIn</string>
+    <string name="Ahobban_Text">আহব্বান বই</string>
+    <string name="writter_name">মিজানুর রহমান আজহারী</string>
+    <string name="update_app">Update Application</string>
+    <string name="ahobban_book">Aber Vinno Kichu Hok</string>
+    <string name="rate_app">Rate Application</string>
+    <string name="share">Share</string>
+    <string name="facebook_page">Dev Facebook Page</string>
+    <string name="facebook_group">Facebook Group</string>
+    <string name="from_text">FROM</string>
+    <string name="hilful_fujul_bd">HILFUL FUJUL BD</string>
+    <string name="congrs">অভিনন্দন!</string>
+    <string name="join_our_group">গ্রুপে জয়েন করার পরামর্শ?</string>
+    <string name="group_join_about">এই অ্যাপ্সের যেকোন সমস্যায় আমারদের গ্রপে জয়েন করুন, এবং একটি স্কিন শর্ট পোষ্ট করুন। তাছাড়াও আপনি গ্রপে বই থেকে আপনার ভালো লাগা অংশ আমাদের সাথে শিয়ার করতে পারবেন। আর আপনি যদি আগে জয়েন করে থাকেন তাহলে “আমি জয়েন করেছি!” বাটুনে ক্লিক করুন।\nসহযোগিতার জন্য ধন্যবাদ।</string>
+    <string name="already_join_group">আমি জয়েন করেছি!</string>
+    <string name="JoinNow">জয়েন</string>
+</resources>
