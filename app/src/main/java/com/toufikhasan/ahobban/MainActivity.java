@@ -46,14 +46,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private static final long LENGTH_MILLISECONDS_WAITE = 5000;
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle toggle;
-    InternetConnectivity internetConnectivity;
-    AdView mAdView;
-    LinearLayout linearLayoutAds;
     ReviewManager manager;
     ReviewInfo reviewInfo;
-    AdsControllerClass adsControllerClass;
-
-    CountDownTimer countDownTimer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,25 +56,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         // Set Title Text
         Objects.requireNonNull(getSupportActionBar()).setTitle(R.string.Ahobban_Text);
-
-
-        MobileAds.initialize(this, initializationStatus -> {
-        });
-        mAdView = findViewById(R.id.adView);
-        linearLayoutAds = findViewById(R.id.bannerLayoutAds);
-
-
-        internetConnectivity = new InternetConnectivity(this);
-        adsControllerClass = new AdsControllerClass(this);
-
-        if (internetConnectivity.isConnected()) {
-            bannerAdsLoad();
-            countDownTimer.start();
-        }
-
-        if (!preferencesForVisibleDialogForMessageBook()) {
-            JOIN_OUR_GROUP_DIALOG_BOX();
-        }
 
         // Drawable Show & hide java program
         drawerLayout = findViewById(R.id.drawerLayout);
@@ -128,70 +103,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         shesVorosa.setOnClickListener(view -> startActivityFile("শেষ ভরসা", "shesVorosa.txt"));
 
 
-    }
-
-    private void bannerAdsLoad() {
-        if (countDownTimer != null) {
-            countDownTimer.cancel();
-        }
-        countDownTimer = new CountDownTimer(LENGTH_MILLISECONDS_WAITE, 50) {
-            @Override
-            public void onTick(long millisUntilFinished) {
-
-            }
-
-            @Override
-            public void onFinish() {
-                if (internetConnectivity.isConnected()) {
-                    if (mAdView != null) {
-                        adsControllerClass.AdsBannerShow(mAdView);
-                        mAdView.setAdListener(new AdListener() {
-                            @Override
-                            public void onAdLoaded() {
-                                super.onAdLoaded();
-                                linearLayoutAds.setVisibility(View.VISIBLE);
-                            }
-                        });
-                    } else {
-                        linearLayoutAds.setVisibility(View.GONE);
-                    }
-                }
-
-            }
-        };
-    }
-
-    /**
-     * Called when leaving the activity
-     */
-    @Override
-    public void onPause() {
-        if (mAdView != null) {
-            mAdView.pause();
-        }
-        super.onPause();
-    }
-
-    /**
-     * Called when returning to the activity
-     */
-    @Override
-    public void onResume() {
-        super.onResume();
-        if (mAdView != null) {
-            mAdView.resume();
-        }
-    }
-
-    /**
-     * Called before the activity is destroyed
-     */
-    @Override
-    public void onDestroy() {
-        if (mAdView != null) {
-            mAdView.destroy();
-        }
-        super.onDestroy();
     }
 
     @Override
@@ -281,37 +192,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return false;
     }
 
-    private void JOIN_OUR_GROUP_DIALOG_BOX() {
-        Dialog dialog = new Dialog(this);
-        dialog.setContentView(R.layout.custom_dialog_join_groph);
-        dialog.setCancelable(false);
-        Button GROUP_JOIN = dialog.findViewById(R.id.group_join_now);
-        GROUP_JOIN.setOnClickListener(v -> {
-            gotoUrl("https://www.facebook.com/groups/books.my.friend");
-            dialog.dismiss();
-        });
-        TextView alreadyJOIN = dialog.findViewById(R.id.group_already_join);
-        alreadyJOIN.setOnClickListener(v -> {
-            preferencesSaveDataMessageBook();
-            dialog.dismiss();
-        });
-        ImageView close = dialog.findViewById(R.id.group_closeDialog_box);
-        close.setOnClickListener(v -> dialog.dismiss());
-        dialog.show();
-    }
-
-    private boolean preferencesForVisibleDialogForMessageBook() {
-        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("saveDialogBoxDataMessageBook", MODE_PRIVATE);
-        return sharedPreferences.getBoolean("fb_group_join_save", false);
-    }
-
-    @SuppressLint("ApplySharedPref")
-    private void preferencesSaveDataMessageBook() {
-        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("saveDialogBoxDataMessageBook", MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putBoolean("fb_group_join_save", true);
-        editor.commit();
-    }
 
     private void startActivityFile(String title, String fileName) {
         Intent intent = new Intent(MainActivity.this, ShowText.class);
